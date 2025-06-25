@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exploration</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body & Background Video */
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Video Background */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Puts video behind content */
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; /* Covers the entire screen */
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #af55f2;
+            padding: 10px;
+            font-size: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            position: fixed;
+            top: 70px;
+            width: 100%;
+			margin:0;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #af55f2;
+        }
+
+        /* Main Content */
+        main {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 150px; /* Prevent content from overlapping navbar */
+        }
+
+        /* Content Box */
+        .content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="https://media.istockphoto.com/id/1780711348/video/spaceships-travel-through-deep-space.mp4?s=mp4-640x640-is&k=20&c=D7bs-BpZe8Pm7ftjbG2SFjNdoAsSG2rgjkn4R8xBYlc=" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1><i>Welcome to Space Exploration</i></h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="planets.html">Planets</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="rocketlaunch.html">Rocket Launch</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content">
+            <h2>Explore the Wonders of Space!</h2>
+            <p>Discover planets, learn about space travel and rocket launch, and experience the mysteries of the universe.</p>
+        </div>
+    </main>
+
+</body>
+</html>

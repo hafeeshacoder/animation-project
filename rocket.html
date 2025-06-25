@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Launch Animation</title>
+    <style>
+        body {
+            background-color: #000;
+            overflow:hidden;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+            position: relative;
+        }
+        
+        /* Starry Sky */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            z-index: -1;
+        }
+        
+        .rocket {
+            position: relative;
+            width: 200px;
+            animation: launch 4s ease-in infinite;
+        }
+        
+        .fire {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 60px;
+            background: orange;
+            border-radius: 50%;
+            animation: fire-flicker 0.4s infinite alternate;
+        }
+        
+        @keyframes launch {
+            0% { transform: translateY(100vh); }
+            100% { transform: translateY(-200px); }
+        }
+        
+        @keyframes fire-flicker {
+            0% { height: 60px; background: red; }
+            100% { height: 80px; background: yellow; }
+        }
+    </style>
+</head>
+<body>
+    <div class="rocket">
+        <img src="https://png.pngtree.com/background/20250126/original/pngtree-stunning-3d-illustration-rocket-flying-solo-in-space-against-a-black-picture-image_13345386.jpg" width="200" height="500">
+        <div class="fire"></div>
+    </div>
+</body>
+</html>

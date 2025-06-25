@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Sun Animation</title>
+    <style>
+        body {
+            background: radial-gradient(circle, rgba(10, 10, 30, 1) 10%, rgba(5, 5, 20, 1) 50%, black 100%), url('https://www.transparenttextures.com/patterns/stardust.png');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sun {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #ffcc00, #ff6600, #cc0000);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 50px #ff6600, 0 0 100px #ff3300, 0 0 150px #cc0000;
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 50px #ff6600, 0 0 100px #ff3300, 0 0 150px #cc0000; }
+            100% { transform: scale(1.1); box-shadow: 0 0 60px #ff9900, 0 0 120px #ff6600, 0 0 180px #ff3300; }
+        }
+
+        .glitter {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: sparkle 1.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.5); opacity: 1; }
+        }
+
+        /* Generate multiple glittering particles */
+        .glitter:nth-child(1) { top: 20%; left: 30%; animation-delay: 0s; }
+        .glitter:nth-child(2) { top: 50%; left: 70%; animation-delay: 0.5s; }
+        .glitter:nth-child(3) { top: 80%; left: 40%; animation-delay: 1s; }
+        .glitter:nth-child(4) { top: 30%; left: 80%; animation-delay: 1.5s; }
+        .glitter:nth-child(5) { top: 60%; left: 20%; animation-delay: 2s; }
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="glitter"></div>
+    <div class="glitter"></div>
+    <div class="glitter"></div>
+    <div class="glitter"></div>
+    <div class="glitter"></div>
+</body>
+</html>
